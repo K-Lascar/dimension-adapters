@@ -58,7 +58,7 @@ const fetch = (chain: Chain) => {
 };
 
 const adapter: Adapter = {
-  version: 1,
+  version: 2,
   adapter: {
     [CHAIN.ARBITRUM]: {
       fetch: fetch(CHAIN.ARBITRUM),

@@ -39,19 +39,19 @@ const graphs: FetchV2 = async ({ chain, endTimestamp }) => {
     const finalUserFee = (userFee / 1e30);
 
     return {
-      dailyFees: finalDailyFee.toString(),
-      dailyUserFees: finalUserFee.toString(),
-      dailyRevenue: (finalDailyFee * 0.3).toString(),
-      dailyProtocolRevenue: "0",
-      totalProtocolRevenue: "0",
-      dailyHoldersRevenue: (finalDailyFee * 0.3).toString(),
-      dailySupplySideRevenue: (finalDailyFee * 0.7).toString(),
+      dailyFees: finalDailyFee,
+      dailyUserFees: finalUserFee,
+      dailyRevenue: (finalDailyFee * 0.3),
+      dailyProtocolRevenue: 0,
+      totalProtocolRevenue: 0,
+      dailyHoldersRevenue: (finalDailyFee * 0.3),
+      dailySupplySideRevenue: (finalDailyFee * 0.7),
     };
 };
 
 
 const adapter: Adapter = {
-  version: 2,
+  version: 1,
   adapter: {
     [ARBITRUM]: {
       fetch: graphs,
