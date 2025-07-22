@@ -10,7 +10,6 @@ export enum CHAIN {
   BOBA_BNB = "boba_bnb",
   BSC = "bsc",
   BIFROST = "bifrost",
-  BOTANIX = "btnx",
   CELO = "celo",
   ETHEREUM = "ethereum",
   FANTOM = "fantom",
